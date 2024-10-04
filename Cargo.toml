@@ -8,6 +8,13 @@ repository = "https://github.com/memomath/graphical"
 edition = "2018"
 
 [dependencies]
-fltk = "0.15.6"
+fltk = { version ="1.4" }
 colored = "2.0.0"
 structopt = "0.3.26"
+cascade = "1.0.1"
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+panic = "abort"
